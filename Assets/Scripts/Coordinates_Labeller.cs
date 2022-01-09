@@ -13,6 +13,7 @@ public class Coordinates_Labeller : MonoBehaviour
     private void Awake()
     {
         label = GetComponent<TextMeshPro>();
+        DisplayCoordinates();
     }
 
 
@@ -30,6 +31,11 @@ public class Coordinates_Labeller : MonoBehaviour
         coordinates.x = (int)transform.position.x / (int)UnityEditor.EditorSnapSettings.move.x;
         coordinates.y = (int)transform.position.z / (int)UnityEditor.EditorSnapSettings.move.z;
         label.text = coordinates.x + "," + coordinates.y;
+        UpdateObjectName();
+    }
+
+    private void UpdateObjectName()
+    {
         transform.parent.name = coordinates.x.ToString() + "," + coordinates.y.ToString();
     }
 }
