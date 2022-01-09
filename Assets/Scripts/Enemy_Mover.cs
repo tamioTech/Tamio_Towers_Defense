@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 public class Enemy_Mover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> list;
@@ -25,8 +25,7 @@ public class Enemy_Mover : MonoBehaviour
     {
         foreach (Waypoint waypoint in list)
         {
-            print(waypoint);
-            print(waypoint.name);
+            
             yield return new WaitForSeconds(waitTime);
             transform.position = waypoint.transform.position;
         }
