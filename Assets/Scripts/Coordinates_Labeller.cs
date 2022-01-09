@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
-public class Coordinates_Naming : MonoBehaviour
+public class Coordinates_Labeller : MonoBehaviour
 {
-    private void Awake()
-    {
-        print("i'm awake");
-    }
-
     // Start is called before the first frame update
     void Start()
     {
