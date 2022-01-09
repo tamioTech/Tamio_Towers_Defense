@@ -7,12 +7,12 @@ using UnityEngine;
 public class Enemy_Mover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> list;
-    [SerializeField] float waitTime = 1.0f;
+    [SerializeField] float ramSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(MoveEnemyAlongPath());
+        StartCoroutine(FollowPath());
     }
 
     // Update is called once per frame
@@ -21,13 +21,24 @@ public class Enemy_Mover : MonoBehaviour
         
     }
 
-    IEnumerator MoveEnemyAlongPath()
+    IEnumerator FollowPath()
     {
         foreach (Waypoint waypoint in list)
         {
             
-            yield return new WaitForSeconds(waitTime);
-            transform.position = waypoint.transform.position;
+            Vector3 currentPosition = transform.position;
+            Vector3 nextPosition = waypoint.transform.position;
+            float travelPercent = 0f;
+
+            transform.LookAt(nextPosition);
+
+            while (travelPercent < 1f)
+            {
+                travelPercent += Time.deltaTime * ramSpeed;
+                transform.position = Vector3.Lerp(currentPosition, nextPosition, travelPercent);
+                yield return new WaitForEndOfFrame();
+            }
+
         }
 
         

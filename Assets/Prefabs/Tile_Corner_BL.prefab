@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 2611242662453574443, guid: 5b4891d14406d4eeaafa4d58a060b32a, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4779425492305553660, guid: 5b4891d14406d4eeaafa4d58a060b32a, type: 3}
       propertyPath: m_Name
       value: Tile_Corner_BL
