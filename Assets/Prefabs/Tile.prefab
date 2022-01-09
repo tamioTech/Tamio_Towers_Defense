@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaceable: 1
+  ballista: {fileID: 3280304744273674061, guid: e654be9ef18bb415bbad97a997a4fd59, type: 3}
 --- !u!65 &8163893011018721695
 BoxCollider:
   m_ObjectHideFlags: 0

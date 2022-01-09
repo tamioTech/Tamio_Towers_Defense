@@ -2152,6 +2152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 0,2
       objectReference: {fileID: 0}
+    - target: {fileID: 7399742336242224713, guid: accc9cde846114c70bd80299d0bee3b2, type: 3}
+      propertyPath: ballista
+      value: 
+      objectReference: {fileID: 2086766991051073570, guid: 9b69e9d15c397442dbcd1a0d89bef6fb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: accc9cde846114c70bd80299d0bee3b2, type: 3}
 --- !u!4 &1389906349 stripped
