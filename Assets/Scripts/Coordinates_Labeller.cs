@@ -9,11 +9,19 @@ public class Coordinates_Labeller : MonoBehaviour
 {
     TextMeshPro label;
     Vector2Int coordinates;
+    Waypoint waypoint;
+
+    [SerializeField] Color defaultColor = Color.white;
+    [SerializeField] Color blockedColor = Color.grey;
+
+    bool toggleCoordinates = true;
+
 
     private void Awake()
     {
         label = GetComponent<TextMeshPro>();
         DisplayCoordinates();
+        waypoint = GetComponentInParent<Waypoint>();
     }
 
 
@@ -22,7 +30,36 @@ public class Coordinates_Labeller : MonoBehaviour
     {
         if(!Application.isPlaying)
         {
-            DisplayCoordinates();
+                DisplayCoordinates();
+            
+        }
+
+
+        ColorCoordinates();
+        ToggleCoordinates();
+
+    }
+
+    private void ColorCoordinates()
+    {
+        
+
+
+        if(waypoint.IsPlaceable)
+        {
+            label.color = defaultColor;
+        }
+        else
+        {
+            label.color = blockedColor;
+        }
+    }
+
+    private void ToggleCoordinates()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            label.enabled = !label.IsActive();
         }
     }
 
@@ -32,10 +69,13 @@ public class Coordinates_Labeller : MonoBehaviour
         coordinates.y = (int)transform.position.z / (int)UnityEditor.EditorSnapSettings.move.z;
         label.text = coordinates.x + "," + coordinates.y;
         UpdateObjectName();
+        
     }
 
     private void UpdateObjectName()
     {
         transform.parent.name = coordinates.x.ToString() + "," + coordinates.y.ToString();
     }
+
+
 }

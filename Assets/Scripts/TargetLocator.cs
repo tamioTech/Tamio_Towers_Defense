@@ -24,4 +24,5 @@ public class TargetLocator : MonoBehaviour
     {
         transform.LookAt(target);
     }
+
 }

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1710944723393082008}
   - component: {fileID: 609122015387646608}
+  - component: {fileID: 6183690105044933421}
+  - component: {fileID: 6228259082770555987}
   m_Layer: 0
   m_Name: Ram
   m_TagString: Untagged
@@ -45,7 +47,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list: []
-  waitTime: 1
+  ramSpeed: 1
+--- !u!65 &6183690105044933421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086766991051073570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.9375286, y: 4.3499703, z: 4.961242}
+  m_Center: {x: 0.01861155, y: 2.1749852, z: -0.011493444}
+--- !u!114 &6228259082770555987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086766991051073570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8b99cc0088c4905a5ddc04ba5e4e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1 &7023474007722643707
 GameObject:
   m_ObjectHideFlags: 0
