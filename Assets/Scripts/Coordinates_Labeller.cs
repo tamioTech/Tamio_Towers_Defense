@@ -19,9 +19,11 @@ public class Coordinates_Labeller : MonoBehaviour
 
     private void Awake()
     {
+        
         label = GetComponent<TextMeshPro>();
         DisplayCoordinates();
         waypoint = GetComponentInParent<Waypoint>();
+        label.enabled = false;
     }
 
 

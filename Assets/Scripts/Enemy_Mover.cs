@@ -6,24 +6,33 @@ using UnityEngine;
 //[ExecuteAlways]
 public class Enemy_Mover : MonoBehaviour
 {
-    [SerializeField] List<Waypoint> list;
+    [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField] float ramSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        FindPath();
         StartCoroutine(FollowPath());
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    void FindPath()
     {
-        
+        path.Clear();
+
+        GameObject[] waypoints = GameObject.FindGameObjectsWithTag("Path");
+
+        foreach(GameObject waypoint in waypoints)
+        {
+            path.Add(waypoint.GetComponent<Waypoint>()); 
+        }
+
     }
 
     IEnumerator FollowPath()
     {
-        foreach (Waypoint waypoint in list)
+        foreach (Waypoint waypoint in path)
         {
             
             Vector3 currentPosition = transform.position;

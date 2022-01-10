@@ -21,10 +21,15 @@ public class Enemy_Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnParticleCollision(GameObject other)
     {
         TakeDamage(other.gameObject.GetComponent<Bolt>().BoltDamage());
+
     }
 }
