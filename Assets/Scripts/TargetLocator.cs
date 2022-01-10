@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetLocator : MonoBehaviour
 {
     [SerializeField] Transform weapon;
+    [SerializeField] ParticleSystem projetileParticles;
     [SerializeField] float range = 15f;
     [SerializeField] Transform target;
 
@@ -47,6 +48,22 @@ public class TargetLocator : MonoBehaviour
         float targetDistance = Vector3.Distance(transform.position, target.position);
 
         weapon.LookAt(target);
+
+        if(targetDistance < range)
+        {
+            Attack(true);
+        }
+        else
+        {
+            Attack(false);
+        }
     }
+
+    void Attack(bool isActive)
+    {
+        var emissionModule = projetileParticles.emission;
+        emissionModule.enabled = isActive;
+    }
+
 
 }
