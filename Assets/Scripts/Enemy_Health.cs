@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour
 {
-    [SerializeField] int health = 20;
+    [SerializeField] int maxHealth = 20;
+    [SerializeField] int currentHealth = 20;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -20,10 +20,10 @@ public class Enemy_Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if(health <= 0)
+        currentHealth -= damage;
+        if(currentHealth <= 0)
         {
-
+            gameObject.SetActive(false);
         }
     }
 

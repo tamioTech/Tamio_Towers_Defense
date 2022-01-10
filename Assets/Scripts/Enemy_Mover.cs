@@ -10,9 +10,10 @@ public class Enemy_Mover : MonoBehaviour
     [SerializeField] float ramSpeed = 1.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         FindPath();
+        ReturnToStart();
         StartCoroutine(FollowPath());
         
     }
@@ -28,6 +29,11 @@ public class Enemy_Mover : MonoBehaviour
             path.Add(waypoint.GetComponent<Waypoint>()); 
         }
 
+    }
+
+    void ReturnToStart()
+    {
+        transform.position = path[0].transform.position;
     }
 
     IEnumerator FollowPath()
@@ -50,6 +56,8 @@ public class Enemy_Mover : MonoBehaviour
 
         }
 
+        gameObject.SetActive(false);
+        
         
     }
 }

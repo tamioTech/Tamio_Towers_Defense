@@ -2307,7 +2307,7 @@ GameObject:
   - component: {fileID: 1657633413}
   - component: {fileID: 1657633414}
   m_Layer: 0
-  m_Name: Spawn Point
+  m_Name: Object Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2336,11 +2336,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1657633412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b2cfcdee236493fb88973e686c60c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 26795e842218e43aabdbab276cb6a690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2086766991051073570, guid: 9b69e9d15c397442dbcd1a0d89bef6fb, type: 3}
-  timeBetweenEnemySpawn: 15.38
+  enemyPrefab: {fileID: 2086766991051073570, guid: 9b69e9d15c397442dbcd1a0d89bef6fb, type: 3}
+  poolSize: 5
+  timeBetweenenemyPrefabSpawn: 1
 --- !u!1001 &1673630601
 PrefabInstance:
   m_ObjectHideFlags: 0

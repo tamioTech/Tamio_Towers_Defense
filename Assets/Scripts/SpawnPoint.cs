@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
-    [SerializeField] float timeBetweenEnemySpawn = 1.0f;
+    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] float timeBetweenenemyPrefabSpawn = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnNewEnemy());
+        StartCoroutine(SpawnNewenemyPrefab());
     }
 
     // Update is called once per frame
@@ -18,12 +18,12 @@ public class SpawnPoint : MonoBehaviour
     {
     }
 
-    IEnumerator SpawnNewEnemy()
+    IEnumerator SpawnNewenemyPrefab()
     {
         while (true)
         {
-            Instantiate(enemy, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(timeBetweenEnemySpawn);
+            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(timeBetweenenemyPrefabSpawn);
         }
 
     }
