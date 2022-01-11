@@ -5,6 +5,7 @@ using TMPro;
 using System;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class Coordinates_Labeller : MonoBehaviour
 {
     TextMeshPro label;
@@ -37,12 +38,12 @@ public class Coordinates_Labeller : MonoBehaviour
         }
 
 
-        ColorCoordinates();
+        SetLabelColor();
         ToggleCoordinates();
 
     }
 
-    private void ColorCoordinates()
+    private void SetLabelColor()
     {
         
 
