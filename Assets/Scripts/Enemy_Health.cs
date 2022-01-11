@@ -7,9 +7,16 @@ public class Enemy_Health : MonoBehaviour
     [SerializeField] int maxHealth = 20;
     [SerializeField] int currentHealth = 20;
 
+    Enemy enemy;
+
     private void OnEnable()
     {
         currentHealth = maxHealth;
+    }
+
+    private void Start()
+    {
+        enemy = FindObjectOfType<Enemy>();
     }
 
     // Update is called once per frame
@@ -23,6 +30,7 @@ public class Enemy_Health : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
+            enemy.RewardGold();
             gameObject.SetActive(false);
         }
     }
