@@ -22,8 +22,7 @@ public class Tower : MonoBehaviour
             Instantiate(tower.gameObject, position, Quaternion.identity);
             return true;
         }
-        else
-
+        
         return false;
     }
 }

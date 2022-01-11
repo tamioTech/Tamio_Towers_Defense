@@ -32,6 +32,11 @@ public class Enemy : MonoBehaviour
     {
         if(bank == null) { return; }
         bank.Withdraw(goldPenalty);
+        int currentBalance = FindObjectOfType<Bank>().GetCurrentBalance;
+        if(currentBalance <= -1)
+        {
+            bank.GameOver();
+        }
     }
     
 }
