@@ -81,8 +81,9 @@ public class Coordinates_Labeller : MonoBehaviour
 
     private void DisplayCoordinates()
     {
-        coordinates.x = (int)transform.position.x / (int)UnityEditor.EditorSnapSettings.move.x;
-        coordinates.y = (int)transform.position.z / (int)UnityEditor.EditorSnapSettings.move.z;
+        if(gridmanager == null) { return; }
+        coordinates.x = (int)transform.position.x / gridmanager.UnityGridSize;
+        coordinates.y = (int)transform.position.z / gridmanager.UnityGridSize;
         label.text = coordinates.x + "," + coordinates.y;
         UpdateObjectName();
         

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 62552348153699742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1620bba27b4b646e3bdd1a88f8ca39c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 934f10d72039147eea1f45e680e1a57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaceable: 1
@@ -246,6 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   blockedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  exploredColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  pathColor: {r: 1, g: 0, b: 1, a: 1}
 --- !u!1 &3319467520670801379
 GameObject:
   m_ObjectHideFlags: 0

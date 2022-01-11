@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 62552348153699742, guid: accc9cde846114c70bd80299d0bee3b2, type: 3}
       propertyPath: m_Name
-      value: 0,0
+      value: Tile_Castle_Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399742336242224713, guid: accc9cde846114c70bd80299d0bee3b2, type: 3}
+      propertyPath: isPlaceable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8678469730693789586, guid: accc9cde846114c70bd80299d0bee3b2, type: 3}
       propertyPath: m_Mesh
