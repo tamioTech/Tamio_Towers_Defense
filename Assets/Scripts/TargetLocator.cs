@@ -13,7 +13,7 @@ public class TargetLocator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = FindObjectOfType<Enemy_Mover>().transform;    
+        target = FindObjectOfType<Enemy_Mover>().transform;    //*******
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class TargetLocator : MonoBehaviour
 
     private void AimWeapon()
     {
-        float targetDistance = Vector3.Distance(transform.position, target.position);
+        float targetDistance = Vector3.Distance(transform.position, target.position); // ***************
 
         weapon.LookAt(target);
 

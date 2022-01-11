@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92cfec74a8f44f5f8933e54b80fe41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: []
   ramSpeed: 1
 --- !u!65 &6183690105044933421
 BoxCollider:
@@ -75,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  currentHealth: 20
+  difficultyRamp: 1
 --- !u!114 &5740615052618953301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldReward: 100
-  goldPenalty: 25
+  goldPenalty: 1
 --- !u!1 &7023474007722643707
 GameObject:
   m_ObjectHideFlags: 0

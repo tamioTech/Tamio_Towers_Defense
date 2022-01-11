@@ -41634,7 +41634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3055055150488845147, guid: b6fb29fbf61144441a98c54bbfc1e9dd, type: 3}
       propertyPath: poolSize
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8305654700684744938, guid: b6fb29fbf61144441a98c54bbfc1e9dd, type: 3}
       propertyPath: startCoordinates.x
@@ -41759,7 +41759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301048236608608862, guid: 214b8bc470bb64524ad43fa6b63d9543, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3301048236978570162, guid: 214b8bc470bb64524ad43fa6b63d9543, type: 3}
       propertyPath: m_IsActive

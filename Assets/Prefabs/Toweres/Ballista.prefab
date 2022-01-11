@@ -4817,7 +4817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e906cbdc50324290af07f73ef872570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 15
 --- !u!1 &2806741106747674670
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,6 +4944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581e12c75e9a54b3b8bac576248de5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 75
 --- !u!1 &6312937051048334554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,5 +5042,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 7904046899584220501}
   projetileParticles: {fileID: 8686180575776138186}
-  range: 15
+  range: 30
   target: {fileID: 1710944723393082008, guid: 9b69e9d15c397442dbcd1a0d89bef6fb, type: 3}
