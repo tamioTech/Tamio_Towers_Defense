@@ -44,7 +44,14 @@ public class PathFinding : MonoBehaviour
     public List<Node> GetNewPath()
     {
         gridmanager.ResetNodes();
-        BreadFirstSearch();
+        BreadthFirstSearch(startCoordinates);
+        return BuildPath();
+    }
+
+    public List<Node> GetNewPath(Vector2Int coordinates)
+    {
+        gridmanager.ResetNodes();
+        BreadthFirstSearch(coordinates);
         return BuildPath();
     }
 
@@ -75,7 +82,7 @@ public class PathFinding : MonoBehaviour
         }
     }
 
-    void BreadFirstSearch()
+    void BreadthFirstSearch(Vector2Int coordinates)
     {
         startNode.isWalkable = true;
         destinationNode.isWalkable = true;
@@ -85,8 +92,8 @@ public class PathFinding : MonoBehaviour
 
         bool isRunning = true;
 
-        frontier.Enqueue(startNode);
-        reached.Add(startCoordinates, startNode);
+        frontier.Enqueue(grid[coordinates]);
+        reached.Add(coordinates, grid[coordinates]);
 
         while(frontier.Count > 0 && isRunning)
         {
@@ -139,5 +146,10 @@ public class PathFinding : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void NotifyReceivers()
+    {
+        BroadcastMessage("RecalculatePath", false, SendMessageOptions.DontRequireReceiver);
     }
 }

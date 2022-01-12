@@ -41782,6 +41782,10 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 180471805}
+    - target: {fileID: 8973414922853723300, guid: 9b3b5ac6a2f774459a916865672b14aa, type: 3}
+      propertyPath: startingBalance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8973414922853723301, guid: 9b3b5ac6a2f774459a916865672b14aa, type: 3}
       propertyPath: m_Name
       value: Bank
